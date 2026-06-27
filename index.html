@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>yt blocker</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="css/style.css" />
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="img/favicon.svg" />
+  <body>
+    <main>
+      <h1>
+        <img
+          src="img/favicon.svg"
+          width="28"
+          height="28" />
+        yt blocker
+      </h1>
+      <p>generate yt ublock origin filters.</p>
+
+      <form id="input-filters">
+        <div class="grid">
+          <div>
+            <label for="input-text-channels">📺 channel names</label>
+            <textarea
+              id="input-text-channels"
+              placeholder="one channel name per line"
+              rows="10"
+              cols="50"></textarea>
+          </div>
+
+          <div>
+            <label for="input-text-video-titles">🎥 video titles</label>
+            <textarea
+              id="input-text-video-titles"
+              placeholder="one video title per line"
+              rows="10"
+              cols="50"></textarea>
+          </div>
+        </div>
+
+        <button type="submit">⚙️ generate filters</button>
+      </form>
+
+      <form id="input-filters">
+        <textarea
+          id="output-filters"
+          rows="10"
+          cols="50"
+          readonly></textarea>
+        <button id="copy-filters">📋 copy filters</button>
+      </form>
+
+      <div class="info">
+        <h3>🔧 modifiers</h3>
+        <p>you can append optional modifiers to the filters</p>
+        <div class="modifiers">
+          <div class="modifier">
+            <code>football/*</code><span>wildcard filter</span>
+          </div>
+          <div class="modifier">
+            <code>football/i</code><span>case insensitive</span>
+          </div>
+          <div class="modifier">
+            <code>football/s</code><span>spaces around filter</span>
+          </div>
+          <div class="modifier">
+            <code>football/*is</code><span>combined</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      type="text/javascript"
+      src="js/url.utils.js"></script>
+    <script
+      type="text/javascript"
+      src="js/script.js"></script>
+    <script
+      type="text/javascript"
+      src="js/event.handlers.js"></script>
+  </body>
+</html>
